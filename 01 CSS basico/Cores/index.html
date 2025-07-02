@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Curso Em Video - Materiais/style.css">
+    <link rel="shortcut icon" href="../Curso Em Video - Materiais/favicon1.ico" type="image/x-icon">
+    <title>Cores</title>
+</head>
+<body>
+    <h1>As cores</h1>
+    <img src="../Curso Em Video - Materiais/circulo-cromatico.jpeg" alt="circulo cromático">
+    <p>Observando um circulo cromático podemos percebemos as três cores primárias, que estão destacadas com o texto mais escuro: <strong>amarelo</strong>, <strong>vermelho</strong> e <strong>azul</strong>. Da junção das cores primárias, temos as três cores secundárias, que são o <strong>laranja</strong>, o <strong>violeta/roxo</strong> e o <strong>verde</strong>. Dada a junção de uma cor primária com uma secundária, temos as seis cores terciárias:</p>
+    <ul>
+        <li>Amarelo-esverdeado (amarelo+verde)
+        <li>Amarelo-alaranjado (amarelo+laranja)</li>
+        <li>Vermelho-alaranjado (vermelho+laranja)</li>
+        <li>Vermelho-arroxeado (vermelho+roxo)</li>
+        <li>Azul-arroxeado (azul+roxo)</li>
+        <li>Azul-esverdeado (azul+verde)</li>
+        </li>
+    </ul>
+
+    <h2>Harmonização das cores</h2>
+    <p>A harmonização das cores pode ser feita de várias maneiras, tendo a junção primeira e segunda, podemos classifica-las como cores quentes e cores frias.</p>
+    <img src="../Curso Em Video - Materiais/cores-temperatura.png" alt="circulo cromático dividindo as cores em quentes e frias">
+    <h3>Cores quentes</h3>
+    <p>As cores quentes, criam uma sensação de calor e proximidade.</p>
+    <h3>Cores frias</h3>
+    <p>As cores frias, estão associadas a sensações mais calmas, de frescor e tranquilidade.</p>
+    <p>E além desses exemplos, existem também os <strong>esquemas harmônicos</strong> cientificamente criados, onde podemos ter o esquema de <strong>cores complementares</strong>, ou seja, cores que tenham um alto contraste, <strong>cores análogas</strong> relacionadas ou com a junção de uma complementar, <strong>cores intercaladas</strong> e o esquema de <strong>cores triádicas, quadráticas e tetrádicas</strong> além do esquema <strong>monocromático.</strong></p>
+    <p>Exemplos para os esquemas:</p>
+    <ul>
+        <li>Complementar ou com alto contraste</li>
+        <img src="../Curso Em Video - Materiais/esquema-complementar.png" alt="esquema de cor com alto contraste">
+        <li>Análogas</li>
+        <img src="../Curso Em Video - Materiais/esquema-analoga.png" alt="">
+            <ul type="disc">
+                <li>Com complementar</li>
+                <img src="../Curso Em Video - Materiais/esquema-analoga-complementar.png" alt="">
+                <li>Relacionada</li>
+                <img src="../Curso Em Video - Materiais/esquema-analoga-relacionada.png" alt="">
+            </ul>
+        <li>Intercalada</li>
+        <img src="../Curso Em Video - Materiais/esquema-intercalado.png" alt="">
+        <li>Triádica, Quadrática e Tetrádica</li>
+        <img src="../Curso Em Video - Materiais/esquema-triadico.png" alt=""><img src="../Curso Em Video - Materiais/esquema-quadratico.png" alt=""><img src="../Curso Em Video - Materiais/esquema-tetradico.png" alt="">
+        <li>Monocrómica</li>
+        <img src="../Curso Em Video - Materiais/esquema-monocromatico.jpg" alt="esquema de cor com degradê">
+    </ul>
+    <h3>Paleta de cores</h3>
+    <p>Uma paleta de cores pode ser feita MONOCROMÁTICA deixado com um efeito degradê de cores ou também pode-se usar de 3 a 5 cores de acordo com o esquema harmônico escolhido.</p>
+    <p>Existem ferramentas como o <a href="https://color.adobe.com/pt/create/color-wheel" target="_blank" rel="external">Adobe Color</a> e o <a href="https://paletton.com/" target="_blank" rel="external">Paletton</a> que auxiliam na criação e exibição da própria paleta ou de uma paleta já feita.</p>
+
+    <h3>Degradê</h3>
+    <p>Criar um efeito degradê usando o CSS devemos abrir o propriedade <code>background-imagem</code> com o valor de linear ou radial gradient e os valores das cores em RGB ou HSL</p>
+
+    <h1>O poder das cores</h1>
+    <p>As cores bem harmonizadas desenvolve um papel primordial na criação de qualquer material, elas são capazes de incentivar emoções nosso cérebro de acordo com a percepção que o individuo recebe (<strong>CONTINUAÇÃO ESCRITA DEPOIS QUE APRENDERMOS A FAZER TABELAS PARA INSERIR O CONTEÚDO DO PDF SOBRE PSICOLOGIA DAS CORES</strong>).</p>
+
+    <h1>Inserir CORES no documento CSS</h1>
+    <p>Existem 4 formas para aplicar a representação de cores no documento HTML, porém, todas as configurações são aplicadas em inglês, deixando o vermelho, verde, azul, matiz, luminosidade e saturação como: Red, Green, Blue, Hue, Saturation e Luminosity, assim, gerando siglas como: RGB e HSL. Em casos para aplicar transparência, devemos usar o canal Alpha. Com isso, temos a primeira representação para inserir cor no documento:</p>
+    <ol>
+        <li>Nome em inglês</li>
+        <code>&lt;p style="background-color: blue; color: white;"&gt;Exemplo&lt;/p&gt;</code>
+        <p style="background-color: blue; color: white;">Exemplo</p>
+
+        <li>RGB</li>
+        <code>&lt;p style="background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);"&gt;Exemplo&lt;/p&gt;</code>
+        <p style="background-color: rgb(0, 0, 255); color: rgb(255, 255, 255) ;">Exemplo</p>
+
+        <li><abbr title="0 1 2 3 4 5 6 7 8 9 A B C D E F">Hexadecimal</abbr></li>
+        <code>&lt;p style="background-color: #0000ff; color: #ffffff;"&gt;Exemplo&lt;/p&gt;</code>
+        <p style="background-color: #0000ff; color: #ffffff;">Exemplo</p>
+
+        <li>HSL</li>
+        <code>&lt;p style="background-color: hsl(250, 100%, 50%); color: hsl(0, 0%, 100%);"&gt;Exemplo&lt;/p&gt;</code>
+        <p style="background-color: hsl(250, 100%, 50%); color: hsl(0, 0%, 100%);">Exemplo</p>
+    </ol>
+</body>
+</html>

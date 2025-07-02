@@ -1,0 +1,3 @@
+O projeto AULA tem o intuito de demonstrar a evolução de acordo com o aprendizado nos assuntos dados através do curso de HTML, CSS e JavaScript ensinado pelo professor Gustavo Guanabara na plataforma CURSO EM VÍDEO.
+
+Nesse projeto, será usada a linguagem JavaScript para uma navagação simples, deixando o cliente ter a percepção e sensação de progresso com as abas internas no site.

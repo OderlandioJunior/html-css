@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Curso Em Video - Materiais/favicon1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../Curso Em Video - Materiais/style.css">
+    <title>Aprendendo CSS</title>
+    <style>
+        p1 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cascading Style Sheets Inline</h1>
+    <p>O CSS inline é usado para dar estilo a um elemento HTML específico. Para este estilo de CSS, você somente vai precisar adicionar o atributo style para cada tag HTML, sem usar os seletores. Este tipo de CSS não é realmente recomendado, já que cada tag HTML precisa ser estilizada de maneira individual. Para inserir o CSS Inline basta adicionar o parâmentro <strong>style=""</strong> dentro da tag e preencher com o comando desejado fechando com ";".</p>
+    <p style="color: red;">Por exemplo esse trecho que está com uma formatação de cor inline!</p>
+
+    <h1>Cascading Style Sheets Interno / Local</h1>
+    <p>O CSS interno consiste em adicionar as regras de CSS no mesmo documento em que está o conteúdo da página, logo depois da tag &lt;head&gt;, criando uma tag de &lt;style&gt; e &lt;/style&gt; é possivel adicionar <strong>SELETORES</strong> para as determinadas tags. O seletor da tag por sua vez é configurado dentro de chaves "{}" sendo necessário fazer a declaração com propriedade/atributo seguido de ":" e o valor para configurar o estilo da tag fechando com ";".</p>
+    <p1>Por exemplo esse trecho que está com uma formatação de cor interna!</p1>
+    
+    <h1>Cascading Style Sheets Externo</h1>
+    <p>O CSS externo permite incorporar regras de CSS presentes em um documento (.css) à parte a outro arquivo HTML, em que ficam os elementos da página. A ligação dos documentos é feita através da tag &lt;link:css&gt; aberta dentro da tag &lt;head&gt;</p>
+    <h1>Hierarquia das CSS</h1>
+    <p>Existe uma ordem de prioridades nas folhas de estilos na qual a INLINE sempre valerá mais que a EXTERNA, dessa forma, podemos estilizar toda a página e se quisermos modificar em apenas uma tag, basta usar a CSS INLINE.</p>
+    <h1>Seletores CSS</h1>
+    <p>Ao criar uma folha de estilo para o documento html é necessário usar seletores para as devidas marcações, no entanto, ao usar um seletor na folha de estilo, a configuração feita será concedida a todas as outras marcações, como ja vimos anteriormente, então, para diferenciar a mesma marcação das demais, utilizaremos os seletores de id ( # ) e de class ( . ) de maneira eficiente. Ao criar nosso conteúdo em HTML, podemos identificar um determinado elemento único com um id <em>(Pode ter mais de um id, o que nao pode é ter o mesmo id pra elementos diferentes. O nome de um id é exclusivo somente pra aquele elemento e o que não se pode fazer é repetir esse nome pra outro elemento)</em>, ou agrupar elementos múltiplos que tenham características semelhantes com um class, dessa forma, criamos seletores personalizados para atribuir um estilo as marcações dentro do documento.</p>
+    <h2>Seletores personalizados</h2>
+    <p>Nas CSS, os identificadores atuam na identificação de uma marcação, representado como #, esse seletor é capaz de aplicar uma ênfase em uma determinada marcação, pois em um único documento, só podemos usar um id para um único elemento, o que significa que não podemos ter dois ou mais elementos com um mesmo id dentro de um mesmo documento html, como por exemplo três "h1" com um id "principal", claro que a estilização feita será concedida aos três elementos, mas como o HTML5 é fundamentado pela semântica, isso estaria errado. As classes, por sua vez, são responsáveis para atribuir configurações específicas a um grupo de elementos</p>
+    <h1>Seletores especiais</h1>
+    <h2>Pseudo-classes</h2>
+    <p>Representado através de ( : ) nas CSS, a pseudo-classe altera o estado de um elemento, ou seja, ela muda a forma de acordo com a interação do mouse do usuário com o devido elemento, tendo seu principal uso, o :hover.</p>
+    <h2>Pseudo-elementos</h2>
+    <p>Inserido após usar duas vezes dois pontos ( :: ) o pseudo-elemento altera o conteúdo do elemento através das CSS sem ter que necessáriamente alterá-lo no HTML</p>
+    <h1>Propriedade em CSS</h1>
+    <p>As propriedades são responsáveis para criar ações nas tags, sendo assim, temos as definições de algumas:</p>
+    <!--inicio da lista-->
+    Propriedades / Ação
+    color / Altera a cor da letra
+    background / Altera o fundo da página, texto e/ou imagem (Possui valores como: color, image, size, position)
+    border / Cria uma borda em volta do elemento (Possui valores como: color, image, size, position) 
+    margin / Cria um espaço em volta do elemento (Possui valores como: orientação, sendo top, bottom, left, right)
+    padding / Cria um espaço dentro do elemento (Possui valores como orientação, sendo top, bottom, left, right)
+    height, width / Altera o tamanho do elemento
+    text / Transforma uma caixa de texto (Possui valores como -align, -decoration, -transform, -indent, -letter-spacing, -word-spacing e -line-height)
+    font / Altera a estrutura do texto (Possui valores como: -family, -size, -style, -weigth)
+    display / Capaz de controlar o layout da página (Possui valores como :block, :inline, :inline-block, :none)
+    <!--fim da lista-->
+</body>
+</html>

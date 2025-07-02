@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Curso Em Video - Materiais/favicon1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../Curso Em Video - Materiais/style.css">
+    <title>Mídia em HTML</title>
+</head>
+<body>
+    <h1>Mídia em HTML</h1>
+    <p>Desenvolver um site com mídias que tenham uma boa qualidade sem criar um peso, imagens dinâmicas capazes de se  adaptar no dispositivo que o usuário está usando é fundamental para o algoritmo do mecanismo de busca, como o Google. Esse tipo de funcionalidade aumenta o tempo que o usuário passa navegando no site e gerando um bom algoritmo para que o site seja altamente recomendado, dessa forma, podemos entender um pouco mais sobre a formatação das mídias dentro do HTML.</p>
+    
+    <h2>Imagem dinâmica</h2>
+    <p>A tag &lt;picture&gt; dentro do código HTML faz com que a imagem seja enquadrada em qualquer dispositivo, sendo ele um celular, tablet, computador ou até mesmo SmartTV. Essa tag é responsável por fazer esse enquadramento da imagem principal através da largura mínima ou máxima (ou min/max-width) definida dentro do parâmentro.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 950px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="exemplo">
+    </picture>
+    
+    <h3>Funcionalidade</h3>
+    <p>Para essa tag ter sua funcionalidade é necessário ter três tipos de tamanho da mesma imagem. Com isso, podemos dar a  funcionalidade dessa tag: abra a tag com a imagem inicial, ou seja:</p>
+<pre>
+&lt;picture&gt;
+    &lt;img src="imagem inicial.png" alt=""exemplo"&gt;
+&lt;picture&gt;
+</pre>
+    <p>Dada a imagem inicial, crie o <abbr title="&lt;source:media:type&gt;">parâmetro de busca</abbr> ainda dentro da <abbr title="&lt;picture&gt;">tag pai</abbr>, e defina o tamanho mínimo ou tamanho máximo que o navegador deverá ter para ser necessário a troca de imagem.</p>
+<pre>
+&lt;picture&gt;
+    &lt;source media="(max-width: 750px)" srcset="imagem inicial tamanho médio" type="image/png"&gt;
+    &lt;img src="imagem inicial.png" alt=""exemplo"&gt;
+&lt;/picture&gt;
+</pre>
+    <p>Com isso, entendemos como é e como funciona a tag &lt;picture&gt; e temos o exemplo acima que foi feito da seguinte forma:</p>
+<pre>
+&lt;picture&gt;
+    &lt;source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png"&gt;
+    &lt;source media="(max-width: 950px)" srcset="imagens/foto-m.png" type="image/png"&gt;
+    &lt;img src="imagens/foto-g.png" alt="exemplo"&gt;
+&lt;/picture&gt;
+</pre>
+    <p>Note que no exemplo, usamos três tipos de tamanho para que a imagem se adapte de acordo com o tamanho do navegador.</p>
+    <h1>Áudio</h1>
+    <p>Os arquivos de áudio tem a mesma característica dos arquivos de imagem, ou seja, devemos prestar atenção no tamanho para não gerar um site pesado e também nos direitos autorais do arquivo. Porém, a principal preocupação ao colocar um arquivo de áudio no site é a compatibilidade com os navegadores, sendo assim, é recomendavél que tenhamos múltiplos formatos de arquivo de áudio. Os arquivos de áudio é o MP3, OGG e WAV, sendo o MP3 o padrão e o WAV o mais pesado.</p>
+    
+    <h2>Reproduzindo áudio</h2>
+    <p>O HTML5 oferece 2 maneiras para a reprodução de áudio, sendo elas, a primeira, padrão, apenas abrindo a tag de &lt;audio&gt; normalmente.</p>
+<pre>
+&lt;audio src="exemplo.mp3"&gt;&lt;/audio&gt;
+</pre>
+    <p>E a segunda maneira é abrir a tag &lt;audio&gt; e usar a tag &lt;source:src&gt; dentro da tag.</p>
+<pre>
+&lt;audio&gt;
+    &lt;source src="exemplo.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+</pre>
+    <p>Independe da maneira que use para reproduzir um áudio, existem alguns parâmentro que são essênciais para prosseguir com a execução. Ainda na tag de &lt;audio&gt;, podemos usar o "preload" e o "controls", deixando a tag completa dessa maneira: <br>&lt;audio preload="" controls&gt;<br>&lt;source src="exemplo.mp3" type="audio/mpeg"&gt; <br>&lt;/audio&gt;</p>
+    <p>Exemplo:</p>
+<pre>
+&lt;audio preload="metadata" controls&gt;
+    &lt;source src="midia/happy-mistake.mp3" type="audio/mpeg"&gt;
+    &lt;source src="midia/happy-mistake.ogg" type="audio.ogg"&gt;
+    &lt;source src="midia/happy-mistake.wav" type="audio/wav"&gt;
+    &lt;p&gt;Infelizmente não foi possível carregar o áudio por conta do seu navegador&lt;/p&gt;
+&lt;/audio&gt;
+</pre>
+    <audio preload="metadata" controls>
+        <source src="midia/happy-mistake.mp3" type="audio/mpeg">
+        <source src="midia/happy-mistake.ogg" type="audio.ogg">
+        <source src="midia/happy-mistake.wav" type="audio/wav">
+        <p>Seu navegador não tem compatibilidade</p>
+    </audio>
+    
+    <h1>Vídeo</h1>
+    <p>Atribuir um vídeo no site tem a mesma característica do áudio, ou seja, devemos ter cuidado com os direitos autorais e a compatibilidade do arquivo com o navegador. Falando em compatibilidade, os arquivos para a reprodução de vídeo são quatro tipos, sendo eles:</p>
+    <ul>
+        <li>.mp4</li>
+        <li>.m4v</li>
+        <li>.ogv</li>
+        <li>.webm</li>
+    </ul>
+    <p>E então temos a tag &lt;video&gt; que podemos trata-la da mesma maneira que a tag &lt;audio&gt;. Podemos usa-la normamente
+    <br><code>&lt;video src=""&gt;&lt;/video&gt;</code></p>
+    <p>ou abri-la e usar o parâmetro de busca manualmente com o <code>&lt;source:src=""&gt;</code>, não esquecendo dos parâmentros essênciais "controls" e "poster"</p>
+<pre>
+&lt;video controls poster="imagem.png"&gt;
+    &lt;source src="midia/meu-video.mp4" type="video/mp4"&gt;
+    &lt;source src="midia/meu-video.ogv" type="video/ogg"&gt;
+    &lt;source src="midia/meu-video.webm" type="video/webm"&gt;
+    &lt;p&gt;Seu navegador não tem compatibilidade&lt;/p&gt;
+&lt;/video&gt;
+</pre>
+    <video width="560" poster="imagens/limoes-capa.png" controls>
+        <source src="midia/meu-video.mp4" type="video/mp4">
+        <source src="midia/meu-video.m4v" type="video/mp4">
+        <source src="midia/meu-video.ogv" type="video/ogg">
+        <source src="midia/meu-video.webm" type="video/webm">
+        <p>Seu navegador não tem compatibilidade</p>
+    </video>
+    <p>Podemos também carregar vídeos de outros sites como o YouTube clicando em "INCORPORAR" e copiando o link dado.</p>
+<pre>
+    &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/ZjAI4YUsj5E?
+    si=7KlS5IGGh8k3947S" title="YouTube video player" frameborder="0" allow="accelerometer; 
+    autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
+</pre>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZjAI4YUsj5E?si=7KlS5IGGh8k3947S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>

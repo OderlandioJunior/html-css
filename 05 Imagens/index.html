@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Curso Em Video - Materiais/favicon1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../Curso Em Video - Materiais/style.css">
+    <title>Imagens</title>
+</head>
+<body>
+    <h1>Imagens</h1>
+    <p>As imagens são fundamentais para criação de site, saber o comportamento, posicionamento, tamanho da imagem e outras coisas são responsabilidade de um desenvolvedor. Com isso, devemos entender um pouco mais sobre imagem dentro do código.</p>
+        <h2>Direitos autorais</h2>
+        <p>É de extrema importância usar imagens que não contem direitos autorais em sites publicos pois isso pode ocasionar um grande problema. Para evitar isso, existem algumas maneiras
+        <ol>
+            <li>Ser o criador da própria arte. Use fotos que seu próprio cliente tirou ou que você mesmo criou</li>
+            <li>Consiga uma autorização legal de quem é o detentor dos direitos autorais. Isso precisa de documentos específicos para tal.</li>
+            <li>Compre o direito de usar a imagem. Existem vários sites como o <a href="https://www.istockphoto.com/br" target="_blank" rel="external">iStockPhoto</a>,
+            <a href="https://depositphotos.com/" target="_blank" rel="external">DepositPhotos</a>, <a href="https://www.shutterstock.com/" target="_blank" rel="external">ShutterStock</a>, etc. Só ficar de olho aberto e leia as regras, pois
+            na maioria dos casos essa imagem que você comprou só pode ser usada uma
+            única vez ou em um único projeto</li>
+        </ol>
+            <h3>Domínio público</h3>
+            <p>Imagens com domínio são imagens livres para uso e formatação, imagens que o autor oferece a autorização para fazer qualquer ação.</p>
+            <p>Existem vários sites que oferecem imagens de domínio público para serem usados em projetos. Mas leia atentamente as instruções para uso dessas imagens. Algumas delas deixam você usar a arte apenas se o artista for creditado em um texto localizado no seu site</p>
+            <ol>
+                <li><a href="https://unsplash.com/" target="_blank" rel="external">UnSplash</a></li>
+                <li><a href="https://www.pexels.com/" target="_blank" rel="external">Pexels</a></li>
+                <li><a href="https://www.freepik.es/" target="_blank" rel="external">FreePik</a></li>
+                <li><a href="https://www.rawpixel.com/" target="_blank" rel="external">Rawpixel</a></li>
+                <li><a href="https://pixabay.com/pt/" target="_blank" rel="external">Pixabay</a></li>
+                <li><a href="https://libreshot.com/" target="_blank" rel="external">Libreshot</a></li>
+                <li><a href="https://commons.wikimedia.org/" target="_blank" rel="external">Wikimedia Commons</a></li>    
+            </ol>
+            <p>Além do próprio <a href="https://www.google.com/imghp?hl=pt-BR&tab=ri&ogbl" target="_blank" rel="external">Google Imagens</a> usando a <strong>ferramenta de pesquisa "Direitos de Uso"</strong> marcada em <strong>"Licenças Creative Commons"</strong></p>
+        <h2>Formato de imagem</h2>
+        <p>Existem vários formatos de imagem, cada um com suas características, vantagens e desvantagens. Porém, vamos nos focar aqui nos dois formatos compactados mais usados para a criação de sites: <b>JPEG</b> e <b>PNG</b>.</p>
+            <h3>JPEG</h3>
+            <p>O algoritmo de compactação JPEG é usado para gerar imagens fotográficas com um tamanho extremamente reduzido. A grande vantagem do uso de arquivos JPG (em formato JPEG) é gerar arquivos muito pequenos e que ocupam pouco espaço em disco. Isso é muito importante, pois quando colocamos um site no ar, ele tem que ser leve e carregar as imagens muito rapidamente.</p>
+            <h3>PNG</h3>
+            <p>A principal característica do PNG é a capacidade de configurar a opacidade de cada pixel (deixá-lo transparente ou com transparência limitada).</p>
+        <h2>Tamanho da imagem</h2>
+        <p>O formato da imagem influencia no tamanho que ela vai ocupar no espaço de disco, mas não somente o formato dela dirá o peso por completo. O tamanho da imagem, no caso largura e altura, também faz influência no espaço de disco, sendo assim, se precisar de uma imagem de tamanho x, edite essa foto em uma ferramenta de edição como o PhotoShop ou o GIMP.</p>
+    
+    <h1>A tag &lt;img&gt;</h1>
+    <p>A tag para carregar uma imagem é a <code>&lt;img src="" alt=""&gt;</code>. Após aberta, temos que completar dois parâmentros dentro dela, os parâmetro são o <b>src=""</b> e o <b>alt=""</b></p>
+        <h2>src</h2>
+        <p>O parâmetro <abbr title="source">src</abbr> irá <strong>buscar</strong> a imagem nos arquivos locais da máquina, sendo assim, informe dentro desse parâmetro o nome da imagem com o formato dela, por exemplo: <code>nomedaimagem.jpg</code>
+        <h2>alt</h2>
+        <p>O parâmetro <abbr title="alternative">alt</abbr> <strong>cria</strong> um <strong>texto alternativo</strong> dentro do código que ajudam muito na indexação do site em mecanismos de busca e também ajudam muito na <strong>Acessibilidade</strong>, pois se um visitante for deficiente visual, seu navegador vai ser capaz de descrever que tipo de foto está sendo mostrada ali.</p>
+        
+        <h2>Arquivo de imagem na mesma pasta ou na pasta principal</h2>
+        <p>Para inserir imagens que estão na <strong>mesma pasta</strong> na qual o arquivo "<abbr title="Nome normalmente usado para arquivo principal em HTML5">index</abbr>" foi criado, usamos a tag <code>&lt;img src="nomedaimagem.jpg alt="exemplo"&gt;</code></p>
+        <img src="html-logo-250.png" alt="Logo HTML5">
+    
+        <h2>Arquivo de imagem em outra pasta</h2>
+        <p>Com imagens que estão em outra pasta, o parâmetro src="" muda para: <code>&lt;img src="<abbr title="Pasta anterior ao arquivo index">nomedapasta</abbr>/nomedaimagem.jpg" alt="exemplo"&gt;</code> </p> 
+        <img src="imagens/css-logo-250.png"alt="Logo CSS3">
+        <p>Também podemos usar o <code>"./"</code> para indicar o caminho da pastas anteriores ao index, deixando a tag &lt;img&gt; dessa forma: <code>&lt;img src="<abbr title="Pasta anterior a pasta que contém o arquivo index">../nomedapasta/</abbr>nomedaimagem.jpg" alt="exemplo"&gt;</code></p>
+        <img src="../Curso Em Video - Materiais/css-logo-small.png">
+
+        <h2>Imagens da internet</h2>
+        <p>Também é possível carregar imagens da internet, modificando o src="" para <code>&lt;img src="domínio completo da imagem" alt="exemplo"&gt;</code></p>
+        <img src="http://beta.itexto.com.br/wp-content/uploads/2017/08/logotipo.png" alt="Logo do JavaScript">
+        <p>Mas um ponto bastante importante é que se caso o site que a imagem pertence cair, no site criado ela ficará corrompida.</p>
+</body>
+</html>

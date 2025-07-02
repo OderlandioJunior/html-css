@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Curso Em Video - Materiais/favicon1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../Curso Em Video - Materiais/style.css">
+    <title>Formatações de texto</title>
+</head>
+<body>
+    <h1>Criação de parágrafos</h1>
+    <p>A HTML considera somente os comandos dados pelas tags, mesmo que dentro do código há varios espaços dados por <code>ENTER</code>, sendo assim, um parágrafo pode ser escrito de qualquer maneira dentro da marcação &lt;p&gt; e &lt;/p&gt;, a HTML irá deixar o texto ter um seguimento contínuo dentro do página. Para isso, podemos usar uma tag de comando &lt;br&gt; para dar uma quebra de linha simples como: <br> essa frase escrita após a marcação.</p>
+    
+    <h1>Construção de textos</h1>
+    <p>Ao desenvolver um site com textos  e imagens, precisamos primeiramente entender o conceito da marcação HTML. A atualização da HTML4 para HTML5 trouxe consigo uma mudança significativa que foi o acréscimo da <strong>Semântica</strong> em suas tags. Esse ramo linguístico traz significados internos para mecanismos de buscas e algoritmos além da própria ação da tag.</p>
+        <h2>Tags semânticas e não semânticas para formatações de texto</h2>
+            <h3>Negrito / Destaque</h3>
+                <p>Nesta frase, temos um <b>termo em negrito</b> usando a tag B (não semântico).</p>
+                <p>Nesta frase, temos um <strong>termo em destaque</strong> usando a tag STRONG (semântico).</p>
+            <h3>Itálico / Ênfase</h3>
+                <p>Nesta frase, temos um <i>termo em itálico</i> usando a tag I (não semântico).</p>
+                <p>Nesta frase, temos um <em>termo em ênfase</em> usando a tag EM (semântico).</p>
+            <h3>Texto marcado</h3>
+                <p>Podemos fazer também um <mark>texto marcado</mark> usando a tag MARK.</p>
+            <h3>Texto pequeno</h3>
+                <p>Podemos criar também um <small>texto pequeno</small> usando a tag SMALL.</p>
+            <h3>Texto deletado</h3>
+                <p>Podemos marcar um <del>texto como excluído</del> para indicar que ele deve ser lido, mas não considerado usando a tag DEL.</p>
+            <h3>Texto inserido</h3>
+                <p>Podemos marcar um <ins>texto como inserido</ins> para dar um ênfase e indicar que ele foi adicionado depois, usando a tag INS(semântico).</p>
+                <p>Existe também o <u>sublinhado</u> com a tag U(não semântico).</p>
+            <h3>Texto sobrescrito</h3>
+                <p>Para inserir coisas do tipo: x<sup>20</sup>+3, usamos a tag SUP.</p>
+            <h3>Texto subescrito</h3>
+                <p>Para inserir coisas do tipo: H<sub>2</sub>O, usamos a tag SUB.</p>
+            <h3>Citações simples</h3>
+                <p>A tag Q é usada quando há uma citação simples, por exeplo: Fulano falou <q>O computador é um burro muito rápido</q></p>
+            <h3>Citações completas</h3>
+                <p>A semântica para usar a citação completa ocorre quando é uma citações de algum autor ou algo do tipo, dessa forma usamos a tag BLOCKQUOTE para fazer a citação do autor.</p>
+                <blockquote cite="https://www.bibliaon.com/joao_14/"> João 14: 5 Disse-lhe Tomé: "Senhor, não sabemos para onde vais; como então podemos saber o caminho?"
+
+                    João 14: 6 Respondeu Jesus: "Eu sou o caminho, a verdade e a vida. Ninguém vem ao Pai, a não ser por mim.</blockquote>
+
+            <h3>Abreviações</h3>
+                <p> Podemos mostrar o significado de tal abreviação usando a tag ABBR: <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr></p>
+        <h2>Outras formatações</h2>
+            <h3>Código-fonte</h3>
+                <p> Para mostrar na pagina o comando que foi feito, usamos a tag CODE, dessa forma, na exibição, a formatação da letra terá o mesmo tamanho semântico de comandos, por exemplo: O comando <code>document.getElementById("teste")</code>  é escrito em linguagem JAVASCRIPT.</p>
+            <h3>Pré-textos</h3>
+                <p>Quando usamos a tag PRE, tudo que está dentro dessa tag será exibido na pagina, ou seja, a tag PRE considera as quebras de linhas usando o ENTER e as tabulações. Normalmente usadas para exibir totalmente as linhas de códigos, como por exemplo, um codigo em linguagem PYTON.</p>
+    <h1>Hierarquia de títulos</h1>
+    <p>Assim como a semântica trouxe significados internos para algumas tags, ela também trouxe uma hierarquia de títulos, aonde temos até o nível 6 de relevância. Ou seja, seguindo uma lógica onde o &lt;H1&gt; apresenta o título principal do conteúdo e por isso tem maior relevância até o &lt;H6&gt; que pela lógica tem menor importância.</p>
+</body>
+</html>

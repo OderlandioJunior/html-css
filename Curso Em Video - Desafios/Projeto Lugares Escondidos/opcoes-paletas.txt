@@ -1,0 +1,13 @@
+Opções de paletas
+
+Marrom:
+#964B00
+#FFDFBF
+#FFBF80
+#573616
+
+Verde
+#1E991E
+#D9FFD9
+#B3FFB3
+#285928

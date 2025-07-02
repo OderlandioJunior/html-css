@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caixa</title>
+</head>
+<body>
+    <h1>Estrutura de um SITE</h1>
+    <p>O HTML é responsável pelo esqueleto de um documento e seu conteúdo e as CSS pela harmonização e padronizição dos mesmos. O HTML e o CSS capazes estabelecerem comandos para o navegador através das tags e seletores, dessa forma, posso ditar meu conteúdo para ter um modelo inicial, como por exemplo, a tag &lt;h1&gt; para um título, ou a tag &lt;p&gt; para um parágrafo, porém, esse breve modelo dado pelas tags e seletores iniciais fazem com que o meu conteúdo fique solto na interface web. A solução desse problema é justamente arrumá-los dentro de caixas</p>
+
+    <h1>Modelo de caixa</h1>
+    <p>As caixas são um conjunto aplicável na linguaguem HTML e CSS que facilitam a organização das partes do site. Tudo aquilo que é exibido, é considerado como uma caixa, podendo até estar dentro uma das outras, fazendo um ANINHAMENTO de caixas.</p>
+
+    <h2>Anatomia de caixas</h2>
+    <p>Tudo começa a partir do conteúdo (content). Todo conteúdo possui uma largura (width) e uma altura (height) e a esse conjunto de propriedades, damos o nome de box-size (tamanho da caixa).
+    <img src="anatomiacaixa.jpg" alt="anatomia de um modelo de caixa">
+    <p>Depois do conteúdo e de seu tamanho, temos a borda (border) que fica em volta dele. Ela pode ter uma espessura, uma cor e um formato, sendo determinados através da CSS.</p>
+    <p>Entre a borda e o conteúdo - da borda para dentro - temos o preenchimento (padding) - da borda para fora - temos a margem (margin).</p>
+    <p>Entre a margem e a borda, podemos determinar o contorno (outline). Ele é um traçado visual que podemos criar fora da borda e o cálculo da sua espessura faz parte da margem estabelecida.</p>
+
+    <h2>Tipos de caixa</h2>
+    <p>Dependendo do comportamento da caixa, podemos classificar um elemento em uma de duas categorias: block-level e inline-level</p>
+
+    <h3>Block-level</h3>
+    <p>Um elemento dito block-level sempre vai se iniciar em uma nova linha e vai ocupar a largura total do elemento onde ele está contido. Se não estiver contido em nenhuma outra caixa, ele vai ocupar 100% da largura do &lt;body&gt;. O elemento block-level mais conhecido é o &lt;div&gt; e suas variações semânticas modernas da HTML5, como &lt;main&gt;, &lt;section&gt;, &lt;aside&gt;, etc.</p>
+
+    <h3>Inline-level</h3>
+    <p>Um elemento do tipo inline-level não vai começar em uma nova linha, e sim no ponto exato onde foram definidos. E a largura dele vai ocupar apenas o tamanho relativo ao seu conteúdo.</p>
+
+    <h1>Aninhamento de caixas</h1>
+    <p>Com a atualização do HTML4 para o HTML5, veio as tags SEMÂNTICAS, como visto nas aulas anteriores. Essa semântica se aplica também no aninhamento das caixas no documento HTML.</p>
+    <p>A partir desses conhecimentos, a elaboração de um site começa a parecer mais simples, tendo um cabeçalho, um menu de navegação, um conteúdo principal, um rodapé ou até mesmo um conteúdo lateral que seja complementar com o conteúdo principal.</p>
+    <p>Tudo isso, pode ser agrupado dentro de caixas de maneira semântica ao invés de somente usar &lt;div&gt; com "id", temos então as marcações semânticas mais comuns para a demarcação de um site:</p>
+    <dl>
+        <dt>Header</dt>
+        <dd>Cria áreas relativas a cabeçalhos. Pode ser o cabeçalho principal de um site ou até mesmo o cabeçalho de uma seção ou artigo. Normalmente inclui títulos &lt;h1&gt; - &lt;h6&gt; e subtítulos. Podem também conter menus de navegação</dd>
+        <dt>Nav</dt>
+        <dd>Define uma área que possui os links de navegação pela estrutura de páginas que vão compor o website. Um &lt;nav&gt; pode estar dentro de um &lt;header&gt;.</dd>
+        <dt>Main</dt>
+        <dd>É um agrupador usado para delimitar o conteúdo principal do nosso site. Normalmente concentra as seções, artigos e conteúdos periféricos.</dd>
+        <dt>Section</dt>
+        <dd>Cria seções para sua página. Ela pode conter o conteúdo diretamente no seu corpo ou dividir os conteúdos em artigos com conteúdos específicos.</dd>
+        <dt>Article</dt>
+        <dd>Um artigo é um elemento que vai conter um conteúdo que pode ser lido de forma independente e dizem respeito a um mesmo assunto. Podemos usar um &lt;article&gt; para delimitar um post de blog ou fórum, uma notícia, etc.</dd>
+        <dt>Aside</dt>
+        <dd>Delimita um conteúdo periférico e complementar ao conteúdo principal de um artigo ou seção.</dd>
+        <dt>Footer</dt>
+        <dd>Cria um rodapé para o site inteiro, seção ou artigo. É um conteúdo que não faz parte diretamente do conteúdo nem é um conteúdo periférico, mas possui informações sobre autoria do conteúdo, links adicionais, mapa do site, documentos relacionados.</dd>
+    </dl>
+    <p>Tendo isso em mente, a organização do documento finaliza com algo semelhante:</p>
+    <img src="demarcacaocaixas.jpg" alt="molde de um site">
+
+    <h1>Estilo para as caixas</h1>
+    <p>As caixas contêm suas próprias propriedades que podem ser alteradas no CSS, como a altura (height) e largura (width), comumente demoninada de BOX-SIZE, o padding, border, outline, margin e além dessas, é possível criar um efeito de sombra, para dar a sensação de volume.</p>
+
+    <h2>Preenchimento</h2>
+    <p>O preenchimento interno do conteúdo é configurado através do <code>padding</code>, essa propriedade segue uma ordem no sentido horário, na qual atribuimos valores ao: 
+    <br><code>padding-top: ;</code> <code>padding-right: ;</code> <code>padding-bottom: ;</code>  <code>padding-left: ;</code></p>
+
+    <h2>Margem</h2>
+    <p>As margens são espaçamentos fora do conteúdo, um espaçamento atribuido à caixas externas, como por exemplo o &lt;body&gt;. A configuração de uma margem é feita através da propriedade <code>margin</code> que segue a ordem o sentido horário para os valores atribuidos:
+    <br><code>margin-top: ;</code> <code>margin-right: ;</code> <code>margin-bottom: ;</code> <code>margin-left: ;</code></p>
+    <p>De maneira que os valores são atribuidos para cada sentido, para centralizar horizontalmente uma caixa, usa-se a propriedade <code>margin: auto;</code></p>
+    <p>As propriedades de margem e preenchimento atribuidadas com um valor, equivale a todos os lados, atruibuindo dois valores, fazem com que o primeiro valor sera agregado em cima e em baixo e o segundo valor à direita e a esquerda.</p>
+
+    <h2>Bordas</h2>
+    <p>A propriedade <code>border</code> é capaz de criar uma borda em um determinado conteúdo, os valores para essa propriedade devem seguir uma ordem específicas na qual devemos atribuir o tamanho, estilo e a cor, sendo representada por:
+    <br><code>border-width: ;</code> <code>border-style: ;</code> <code>border-color: ;</code> 
+    <br>As bordas apresentam alguns estilos como:</p>
+    <ul type="none">
+        <li>dotted</li>
+        <li>double</li>
+        <li>groove</li>
+        <li>ridge</li>
+        <li>inset</li>
+        <li>outset</li>
+        <li>dashed</li>
+        <li>solid</li>
+    </ul>
+
+    <h3>Outline</h3>
+    <p>A propriedade <code>outline</code> cria uma borda externa do conteúdo, mesmo que haja uma borda interna, sua configuração segue a mesma ordem da <code>border</code>:
+    <br><code>outline-width: ;</code> <code>outline-style: ;</code> <code>outline-color: ;</code></p>
+    <h3>Bordas arredondadas</h3>
+    <p>As bordas das caixas não precisam ser sempre retangulares e podem ter alguns detalhes especiais como vértices arredondados, usando a propriedade <code>border-radius</code> 
+    <p>A propriedade de uma <code>border-radius</code> segue também uma ordem específica, sendo o primeiro valor agregado a parte SUPERIOR ESQUERDA, o segundo valor a parte SUPERIOR DIREITA, o terceiro valor na parte INFERIOR DIREITA e o ultimo valor, agregado a parte INFERIOR ESQUERDA, fazendo quase o movimento HORÁRIO de um relógio.</p>
+    <p>Com isso, ao declarar a propriedade com SOMENTE um valor, o mesmo será equivalente a todas as bordas do conteúdo, por exemplo: <code>border-radius: 50%</code> fará com que o mesmo fique igual a uma bola, pois todos os arredondamentos ficam pela metade. Ao declarar com dois valores, o resultado seria igual a um X, atribuindo o valor inicial a SUPERIOR ESQUERDA e INFERIOR DIREITA e o segundo valor à SUPERIOR DIREITA e INFERIOR ESQUERDA.</p>
+
+    <h3>Bordas personalizadas</h3>
+    <p>É possível usar imagens como uma  borda através da propriedade <code>border-image</code>. Essa propriedade funciona OBRIGATÓRIAMENTE depois da propriedade <code>border</code> e seus valores, após a atribuição, é possível fazer a alteração do <code>border image</code> na seguinte ordem: 
+    <br><code>border-image-source: url ('');</code> <code>border-image-slice: ;</code> <code>border-image-repeat: ;</code></p>
+
+    <h2>Sombras</h2>
+    <p> assim que adicionamos a propriedade box-shadow no documento CSS, a propriedade segue sempre uma ordem específica, sendo:</p>
+    <ol>
+        <li>Deslocamento horizontal: Faz a sombra andar para o lado direito (valores negativos causam deslocamento para a esquerda)</li>
+        <li>Deslocamento vertical: Faz a sombra andar para baixo (valores negativos causam deslocamento para cima)</li>
+        <li>Espalhamento</li>
+        <li>Cor</li>
+    </ol>
+    <p>As sombras é um efeito um tanto quanto perigoso no seu manuseio, pois se exagerada, gera um visual muito pesado, além da limitação de cor, já que uma SOMBRA é a ausência de luz em um determinado local, ou seja, não existe sombra VERMELHA (existe excessão, caso o cliente queira um site vermelho). Neste caso, para obeter um resultado agradável, use o RGBA, como foi mostrado no capitulo de cores, causando uma transparência na SOMBRA.</p>
+    <h1>Simplificando as propriedades</h1>
+    <p>Por conta das propriedades seguirem uma certa ordem, isso torna possivel simplifica-las com shorthands:</p>
+    <h2>Borda e Outline</h2>
+    <p>A ordem para as duas configurações é sempre a mesma: 
+    <br>largura (-width), estilo (-style) e cor (-color).</p>
+    <img src="shorthandborda.jpg" alt="simplificando as propriedades de borda e outline">
+    <h2>Preenchimento e margem</h2>
+    <p>A ordem para as duas configurações é sempre a mesma:
+    <br>superior (-top), direita (-right), inferior (-bottom), esquerda (-left).</p>
+    <img src="shorthandmargin.jpg" alt="simplificando as propriedades de margem e preenchimento">
+    <p>Até mesmo quando temos dois valores</p>
+    <img src="shorthandmargin2.jpg" alt="simplificando as propriedades de margem e preenchimento com dois valores">
+</body>
+</html>
